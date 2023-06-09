@@ -54,6 +54,7 @@
     "vite-plugin-checker": "^0.6.0",
     "vitest": "^0.32.0"
   },
+  "pre-commit": "lint",
   "lint-staged": {
     "*.{ts,tsx}": "eslint --fix",
     "*.{ts,tsx,md,html,css}": "prettier --write"
