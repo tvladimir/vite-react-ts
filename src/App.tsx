@@ -1,9 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [someVar, setSomeVar] = useState(0);
+
+  useEffect(()=>{
+    console.log(someVar)
+  },[someVar])
+
 
   return (
     <>
@@ -19,6 +25,9 @@ function App() {
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
+        </button>
+        <button onClick={() => setSomeVar((count) => count + 1)}>
+        someVar is {someVar}
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR

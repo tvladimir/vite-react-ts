@@ -9,7 +9,8 @@
     "serve": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "vitest",
+    "test": "vitest --run",
+    "test:watch": "vitest",
     "lint": "eslint . --ext .ts,.tsx"
   },
   "dependencies": {
@@ -53,10 +54,5 @@
     "vite": "^4.3.9",
     "vite-plugin-checker": "^0.6.0",
     "vitest": "^0.32.0"
-  },
-  "pre-commit": "lint",
-  "lint-staged": {
-    "*.{ts,tsx}": "eslint --fix",
-    "*.{ts,tsx,md,html,css}": "prettier --write"
   }
 }
